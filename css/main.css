@@ -1,115 +1,71 @@
-style body
-body {
-	margin: 0 auto 1em;
-	padding: 30px;
-	color: #000;
-	background-color: #ffffff;
-	font-family: Arial, Helvetica, sans-serif;
-	background-image: url(../images/banner.jpg);
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-}
-h6 {
-	width: 66.7%;
-	height: .31%;
-	padding: .153%;
-}
-article {
-	font-size: 1em;
-	line-height: 1.6;
-	text-align: justify;
-	margin: auto;
-	margin-bottom: 20px;
-}
-h1, h2, h3, h4, h5, h6 {
-	margin: 1em;	
-	padding-right: 15px;
-	padding-left: 15px
-}
+/*Fonts--------------------------------------------------------*/
 @font-face {
 	font-family: 'Arizonia', cursive;
 	src: url(http://fonts.googleapis.com/css?family=Arizonia);
 }	
-h2 {
-	font-family: 'Arizonia', cursive;
-	font-size: 30px;
-	text-shadow: 4px 4px 4px #aaa;
+@font-face {
+	font-family: 'Cantarell';
+	src: url('../_fonts/Cantarell-Regular-webfont.eot');
+	src: url('../_fonts/Cantarell-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../_fonts/Cantarell-Regular-webfont.woff') format('woff'), url('../_fonts/Cantarell-Regular-webfont.ttf') format('truetype'), url('../_fonts/Cantarell-Regular-webfont.svg#webfont9UOzsjXz') format('svg');
+	font-weight: normal;
+	font-style:normal;
 }
-.col1 {
-	background: rgb(148, 200, 61);
-	height: 300px;
-	float: left;
-	width: 266.6px;
-	padding: 20px;
-	margin-right: 20px;
+
+/*Global Styles -----------------------------------------------*/
+
+/*Basic Layout Styles -----------------------------------------*/
+
+body {
+	margin: 0 auto 1em;
+	width: 960px;
+	padding: 30px;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
 }
-.col2 {
-	background: rgb(194, 23, 140);
-	height: 300px;
-	float: left;
-	padding: 20px;
-	width: 266.6px;
+.banner {
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	width: 85%;
 }
-.col3 {
-	background: rgb(194, 23, 140);
-	height: 300px;
-	padding: 20px;
-	width: 266.6px;
-	float: left;
-	margin: 0 auto;
+.container {
+	background: rgb(245, 245, 245);
+	border-radius: 25px 10px;
+	padding: 25px;
+	position: relative;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	height: 100px;
+	overflow: auto;
 }
-footer {
-	background: grey;
-	line-height: 3em;
-	font-size: .6em;
-	color: white;
-	padding: 0 2em;
-	clear: both;
-	border-top: .6em solid white;
-}
-.demo {
-	clear: both;
-}
-.nav {
+/* Content Region Styles ------------------------------------------*/
+
+/*Navigation*/
+
+nav {
 	background: #c2178c;
-	height: 2.3em;
-}
-.opacity {
-	background: rgb(131,151,111);
-	border: 4px solid black;
-	position: absolute;
-	left: -50px;
-	top: 50px;
+	height: 4.3em;
 }
 ul li{
-	margin: 0;
-	padding: 0;
+	margin: .01%;
+	padding: .01%;
 	list-style: none;
 	float: left;
 }
-ul{
+#mainNav ul{
 	background: #94c830;
-	height: 2em;
+	height: 3em;
 	width: 80%;
 }
-li a{
+#mainNav li a{
 	display: block;	
-	line-height: 2em;
+	line-height: 3em;
 	padding: 0 1em;
 	color: white;
 	text-decoration: none;
 }
-li a:hover {
+#mainNav li a:hover {
 	background: grey;
-	height: 2em;
-	padding-top: .3em;
-	position: relative;
-	top: -.3em;
-	border-radius: .3em .3em 0 0;
-}
-.current, a:hover.current {
-	background: grey;
-	color: #eee;
+	height: 3em;
 	padding-top: .3em;
 	position: relative;
 	top: -.3em;
@@ -117,26 +73,172 @@ li a:hover {
 	border-bottom: .3em solid #94c830;
 	cursor: default;
 }
-nav li:last-child a	{
+#mainNav .current, a:hover.current {
+	background: grey;
+	color: #eee;
+	padding-top: .3em;
+	position: relative;
+	top: -.3em;
+	border-radius: .3em .3em 0 0;
+	border-bottom: .3em solid #94c830;
+}
+#mainNav nav li:last-child a	{
 	border-bottom: none;
 }
-ul.gallery{
+
+/*Header Styles*/
+
+h6 {
+	width: 66.7%;
+	height: .31%;
+	padding: .153%;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em;	
+	padding-right: 15px;
+	padding-left: 15px
+}	
+h2 {
+	font-family: 'Arizonia', cursive;
+	font-size: 25px;
+	text-shadow: 2px 2px 2px #aaa;
+	text-align: center;
+	
+}
+/*Column Styles*/
+
+.col1 {
+	background: rgb(148, 200, 61);
+	height: 250px;
+	float: left;
+	width: 225px;
+	padding: 20px;
+	opacity: .9;
+	margin: 20px;
+	border: .3em solid grey;
+	font-family: 'Cantarell';
+	text-align: justify;
+}
+.col2 {
+	background: rgb(194, 23, 140);
+	height: 250px;
+	float: left;
+	padding: 20px;
+	width: 225px;
+	opacity: .9;
+	margin: 20px;
+	border: .3em solid grey;
+	font-family: 'Cantarell';
+	text-align: justify;	
+}
+.col3 {
+	background: rgb(23, 140, 194);
+	height: 250px;
+	padding: 20px;
+	width: 225px;
+	float: left;
+	margin: 20px;
+	opacity: .9;
+	border: .3em solid grey;
+	font-family: 'Cantarell';
+	text-align: justify;	
+}
+.demo {
+	clear: both;
+}
+
+/*Table Styles*/
+
+table {
+	border-collapse: collapse;
+	border: 1px solid #000;
+	margin:20px;
+	float: left;
+	clear: both;
+}
+td {
+	border: 1px solid #000;
+	padding: 0.3em;
+	text-align: center;	
+}		
+th {
+	text-align: center;
+	background-color: #999;
+	color: #fff;
+	padding: 0.3em;
+}
+h2.table {
+	float: left;
+	clear: both;
+}
+
+/*Gallery*/
+
+.gallery {
 	border: 1px dashed #fff;
 	list-style-type: none;
-	width: .5489%;
-	overflow: hidden;
-	padding: 5px;
-}
-li.gallery{
+	width: 100px;
+	overflow: auto;
+	padding: 10px;
 	float:left;
-	margin-left: 19px;
+	margin-left: 70px;
+	clear: both;
 }	
-a.gallery{
-	border: 10px solid #fff;
+ul.gallery  {
+	border: 3px solid rgb(224, 224, 224);
 	display: block;
-	height: 101px;
-	width: 130px;
-}	
+	height: 150px;
+	width: 85%;
+}
+
+/*contact styles*/
+
+#contact h2 {
+	font-size: 1.4em;
+	float: none;
+	margin-bottom: 3em;
+	background: rgb(194, 23, 140);	
+}
+
+#contact ul {
+	list-style: none;
+}
+
+#contact li {
+	display: inline-block;
+	width: 3px;
+	margin-bottom: 1em;
+	width: .25280%;
+	background: rgb(194, 23, 140);		
+}
+
+#contact li a {
+	color:rgb(76, 67, 65);
+	border: none;
+	padding-left: .04494%;
+	line-height: 50px;
+	font-size: 1.2em;
+	display:block;
+}
+
+#contact a:hover {
+	color: rgb(194, 23, 140);	
+;
+}
+
+/*Footer Styles*/
+
+footer {
+	background: rgb(224, 224, 224);
+	line-height: 3em;
+	font-size: .8em;
+	color: black;
+	padding: 2em;
+	clear: both;
+	border-top: .4em solid black;
+
+}
+/*Fluid Settings*/
 @media only screen and (max-width: 480px){
 
  body {
